@@ -16,7 +16,9 @@ export default Card;
 const styles = StyleSheet.create({
   Container: {
     width: '45%',
-    margin: 8,
+    marginHorizontal: 8,
+    marginTop: 8,
+    marginBottom: 16,
     borderRadius: 12,
     elevation: 16,
     backgroundColor: "#fff",
@@ -34,9 +36,9 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   CardAmount: {
-    marginTop: 16,
-    marginHorizontal: 10,
-    marginBottom: 16,
+    paddingTop: 16,
+    paddingHorizontal: 10,
+    paddingBottom: 16,
   },
 });
 
