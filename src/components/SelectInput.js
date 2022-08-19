@@ -3,7 +3,7 @@ import SelectDropdown from "react-native-select-dropdown";
 import { View, Text, StyleSheet } from "react-native";
 import { ChevronDownIcon } from "react-native-heroicons/solid";
 
-const SelectInput = () => {
+const SelectInput = ({ onSelect, value }) => {
   const shopping = ["Art", "Electronics", "Jewelry", "Musical Instrument"];
 
   const dropdownStyles = {
@@ -18,6 +18,8 @@ const SelectInput = () => {
     <View>
       <Text style={styles.dropdownText}>Category</Text>
       <SelectDropdown
+        value={value}
+        onChangeText={onSelect}
         dropdownStyle={{
           backgroundColor: "#fff",
           textAlign: "left",

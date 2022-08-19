@@ -1,12 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 
-const Card = ({imgUrl, title, amount }) => {
+const Card = ({ photo, name, purchasePrice }) => {
   return (
     <View style={styles.Container}>
-      <Image style={styles.image} source={{ uri: imgUrl}} />
-      <Text style={styles.CardText}>{title}</Text>
-      <Text style={styles.CardAmount}>{amount}</Text>
+      <Image style={styles.image} source={{ uri: photo }} />
+      <Text style={styles.CardText}>{name}</Text>
+      <Text style={styles.CardAmount}>{purchasePrice}</Text>
     </View>
   );
 };
@@ -15,16 +15,16 @@ export default Card;
 
 const styles = StyleSheet.create({
   Container: {
-    width: '45%',
+    flex: 1,
     marginHorizontal: 8,
-    marginTop: 8,
+    // marginTop: 8,
     marginBottom: 16,
     borderRadius: 12,
-    elevation: 16,
+    elevation: 4,
     backgroundColor: "#fff",
   },
   image: {
-    width: "100%",
+    // width: "100%",
     height: 200,
     borderTopLeftRadius: 12,
     borderTopRightRadius: 12,
@@ -41,4 +41,3 @@ const styles = StyleSheet.create({
     paddingBottom: 16,
   },
 });
-
