@@ -360,3 +360,43 @@ const StyledStepOne = styled.div`
 `;
 
 export default StepOne;
+
+import React from "react";
+import styled from "styled-components";
+
+const SelectField = ({
+  label,
+  type,
+  name,
+  value,
+  onChange,
+  onBlur,
+  error,
+  placeholder,
+  defaultValue,
+  disabled,
+  children,
+  required = false,
+}) => {
+  return (
+    <StyledSelect>
+      {label && (
+        <label className="mb-2 text-[14px]" htmlFor={name}>
+          {label}
+          {required && <span style={{ color: "red" }}>*</span>}
+        </label>
+      )}
+      <select
+        className="w-full outline-0 outline-[#98A2B3] border-[1px] mt-2 text-sm text-[#98A2B3] border-gray-400 px-3 py-3 rounded-md"
+        name={name}
+      >
+        {children}
+      </select>
+      {error && <div className="text-red-800 text-xs">{error}</div>}
+    </StyledSelect>
+  );
+};
+
+const StyledSelect = styled.div``;
+
+export default SelectField;
