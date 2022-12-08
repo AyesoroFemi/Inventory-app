@@ -400,3 +400,15 @@ const SelectField = ({
 const StyledSelect = styled.div``;
 
 export default SelectField;
+
+<div className="flex items-center">
+        <Sidebar setCurrentTab={setCurrentTab} />
+        <div className="w-full">
+          <StyledHeader className="flex items-center justify-between py-8 pl-9 pr-24">
+            <h3 className="text-2xl font-bold">Get Started</h3>
+            <a href="/">Help</a>
+          </StyledHeader>
+          <div>
+            {currentTab === 0 && <StepOne />}
+            {currentTab === 1 && <StepTwo />}
+          </div>
