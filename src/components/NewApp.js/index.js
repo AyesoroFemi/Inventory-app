@@ -412,3 +412,135 @@ export default SelectField;
             {currentTab === 0 && <StepOne />}
             {currentTab === 1 && <StepTwo />}
           </div>
+
+          import React from "react";
+import styled from "styled-components";
+import Button from "../common/Button";
+import SelectField from "../common/SelectField";
+
+const StepTwo = () => {
+  return (
+    <StyledStepTwo className="mx-4 lg:ml-[37px] mr-4 lg:mr-60">
+      <div className="flex justify-between mt-10">
+        <h4 className="font-semibold text-base">Programming Experience</h4>
+        <p className="text-[#3CAB52] text-sm">STEP 2 of 4</p>
+      </div>
+      <p className="text-sm">We would like some more information</p>
+      <div className="pt-10 grid md:grid-cols-2 gap-x-8 gap-y-4">
+        <div className="mt-6 2xl:mt-0">
+          <SelectField
+            placeholder="Select"
+            name="Select"
+            label="Programming Experience"
+          >
+            <option className="text-sm" value="">
+              Select
+            </option>
+            <option value="">None</option>
+            <option value="">Beginner</option>
+            <option value="">Intermediate</option>
+          </SelectField>
+        </div>
+        <SelectField
+          placeholder="Select"
+          name="Select"
+          label="Have you contributed to any project using your programming experience?"
+        >
+          <option className="text-sm" value="">
+            Select
+          </option>
+          <option value="">None</option>
+          <option value="">Beginner</option>
+          <option value="">Intermediate</option>
+        </SelectField>
+        <SelectField
+          placeholder="Select"
+          name="Select"
+          label="Briefly describe your programming contribution to the product/project"
+        >
+          <option className="text-sm" value="">
+            Select
+          </option>
+          <option value="">None</option>
+          <option value="">Beginner</option>
+          <option value="">Intermediate</option>
+        </SelectField>
+      </div>
+      <div>
+        <p className="text-sm md:text-base pt-4 mb-6 font-semibold">
+          Achievements & Leadership
+        </p>
+        <div className="grid md:grid-cols-2 gap-x-8 gap-y-4">
+          <SelectField
+            placeholder="Select"
+            name="Select"
+            label="What do you consider as your most outstanding achievements?"
+          >
+            <option className="text-sm" value="">
+              Select
+            </option>
+            <option value="">None</option>
+            <option value="">Beginner</option>
+            <option value="">Intermediate</option>
+          </SelectField>
+          <SelectField
+            placeholder="Select"
+            name="Select"
+            label="Have you held any leadership positions in the past?"
+          >
+            <option className="text-sm" value="">
+              Select
+            </option>
+            <option value="">None</option>
+            <option value="">Beginner</option>
+            <option value="">Intermediate</option>
+          </SelectField>
+          <SelectField
+            placeholder="Select"
+            name="Select"
+            label="If Yes, Describe the leadership position(s) and how you played it/them"
+          >
+            <option className="text-sm" value="">
+              Select
+            </option>
+            <option value="">None</option>
+            <option value="">Beginner</option>
+            <option value="">Intermediate</option>
+          </SelectField>
+        </div>
+      </div>
+      <div>
+        <p className="text-sm md:text-base pt-4 mb-2 my-4 font-semibold">
+          Commitment to the Decagon Mission
+        </p>
+        <p className="text-[15px]">
+          Decagon is on a mission to help transform Nigeria into one of the most
+          respected sources of elite software engineering talent in the world.
+          Decagon has the experience and capability to help people become
+          world-class software engineers. We are looking for candidates (to
+          partner with) who have the potential to be a great software engineer,
+          leader and ambassador, and driver of the Decagon mission.
+        </p>
+        <div className="mt-8">
+          <label className="text-sm">
+            Tell us why you are an ideal candidate for our software engineering
+            program
+          </label>
+          <textarea
+            placeholder="Write here..."
+            className="border-[1px] p-4 text-sm border-gray-400 mt-2 rounded-md w-full"
+            rows="10"
+            cols="50"
+          ></textarea>
+        </div>
+      </div>
+      <div className="mt-10 w-full md:w-2/12 mb-24">
+        <Button>Next</Button>
+      </div>
+    </StyledStepTwo>
+  );
+};
+
+const StyledStepTwo = styled.div``;
+
+export default StepTwo;
